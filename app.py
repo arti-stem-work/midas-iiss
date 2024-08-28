@@ -13,7 +13,7 @@ import subprocess
 # Function to run R script
 def run_r_script(script_path):
     try:
-        result = subprocess.run(["Rscript", script_path], capture_output=True, text=True)
+        result = subprocess.run(["Rscript", script_path], capture_output=True, check=True)
         if result.returncode == 0:
             print("R script executed successfully.")
         else:

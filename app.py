@@ -206,7 +206,7 @@ if uploaded_files:
 
             # Create a DataFrame for the results
             if property_selection == 'All':
-                result_df = pd.DataFrame(predictions, columns=['Cu', 'Zn', 'Fe', 'Mn'])
+                result = pd.DataFrame(predictions, columns=['Cu', 'Zn', 'Fe', 'Mn'])
             else:
                 property_index = ['Cu', 'Zn', 'Fe', 'Mn'].index(property_selection)
                 results = pd.DataFrame(predictions[:, property_index], columns=[property_selection])

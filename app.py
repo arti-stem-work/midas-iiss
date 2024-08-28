@@ -12,7 +12,7 @@ import subprocess
 
 # Path to the R script
 r_script_path = "install_hexView.R"
-subprocess.run(["Rscript", r_script_path], capture_output=True, check=True)
+subprocess.run(["Rscript", r_script_path],check=True)
 
 try:
     result = subprocess.run(["Rscript", "--version"], capture_output=True, text=True)

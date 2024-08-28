@@ -1,16 +1,3 @@
-# Define a personal library directory
-lib_path <- "/home/adminuser/R/x86_64-pc-linux-gnu-library/4.2"
-
-# Install the package in the personal library directory if not already installed
-if (!require(hexView, lib.loc = lib_path, character.only = TRUE)) {
-    install.packages("hexView", lib = lib_path)
-}
-
-# Load the package from the personal library directory
-library(hexView, lib.loc = lib_path)
-
-
-
 args <- commandArgs(trailingOnly = TRUE)
 opus.file.path <- args[1]
 output.path <- args[2]

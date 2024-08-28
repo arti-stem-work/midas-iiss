@@ -10,23 +10,10 @@ import os
 import tempfile  # Use for temporary directory management
 import subprocess
 
-# Function to run R script
-def run_r_script(script_path):
-    try:
-        result = subprocess.run(["Rscript", script_path], capture_output=True, check=True)
-        if result.returncode == 0:
-            print("R script executed successfully.")
-        else:
-            print("R script execution failed.")
-            print(result.stderr)
-    except Exception as e:
-        print("Error running R script:", e)
-
 # Path to the R script
 r_script_path = "install_hexView.R"
+subprocess.run(["Rscript", r_script_path], capture_output=True, check=True)
 
-# Execute the R script
-run_r_script(r_script_path)
 try:
     result = subprocess.run(["Rscript", "--version"], capture_output=True, text=True)
     print("Rscript Version:", result.stdout)

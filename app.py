@@ -203,4 +203,3 @@ if uploaded_files:
             csv = results.to_csv(index=False).encode('utf-8')
             st.download_button(label="Download the predictions as CSV File", data=csv, file_name='predictions.csv', mime='text/csv')
 
-

@@ -1,4 +1,9 @@
-install.packages(c("hexView"))
+dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)  # create personal library
+.libPaths(Sys.getenv("R_LIBS_USER"))  # add to the path
+
+install.packages("hexView")  # install like always
+library(hexView) 
+
 args <- commandArgs(trailingOnly = TRUE)
 opus.file.path <- args[1]
 output.path <- args[2]

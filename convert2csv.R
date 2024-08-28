@@ -1,4 +1,4 @@
-install.packages("hexView", lib = "~/R/library")
+install.packages("hexView")
 
 args <- commandArgs(trailingOnly = TRUE)
 opus.file.path <- args[1]

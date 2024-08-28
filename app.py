@@ -5,21 +5,15 @@ import joblib
 import plotly.graph_objs as go
 from scipy.signal import savgol_filter, detrend
 from PIL import Image
-import tempfile
+import subprocess
 import os
-from rpy2 import robjects
-from rpy2.rinterface_lib.embedded import RRuntimeError
-from rpy2.rinterface_lib.embedded import RScript
-
-# Function to check and install R packages
-def install_r_package(package_name):
-    try:
-        robjects.r(f'if (!requireNamespace("{package_name}", quietly = TRUE)) install.packages("{package_name}")')
-    except RRuntimeError as e:
-        st.error(f"An error occurred while installing R package {package_name}: {e}")
-
-# Install required R packages
-install_r_package("hexView")
+import tempfile  # Use for temporary directory management
+import subprocess
+try:
+    result = subprocess.run(["Rscript", "--version"], capture_output=True, text=True)
+    print("Rscript Version:", result.stdout)
+except Exception as e:
+    print("Error checking Rscript version:", e)
 
 # Load your pre-trained model and pre-processing pipeline
 model = joblib.load('multi_output_stacking_model.pkl')
@@ -101,20 +95,13 @@ if uploaded_files:
             file_path = os.path.join(temp_dir, uploaded_file.name)
             with open(file_path, "wb") as f:
                 f.write(uploaded_file.read())
-
-        # Path to the R script
-        r_script_path = "convert2csv.R"
-
-        # Execute the R script using rpy2
-        try:
-            r_script = RScript(r_script_path)
-            r_script.run([temp_dir, temp_dir])
-        except RRuntimeError as e:
-            st.error(f"An error occurred while running the R script: {e}")
-            st.stop()
-
-        # Load the converted CSV
+        
+        # Call the R script to convert OPUS files to CSV, passing the temp directory path
+        r_script = "convert2csv.R"  # Ensure this script is in the same directory as your Streamlit app
         output_csv = os.path.join(temp_dir, "Spectra.csv")
+        subprocess.run(["Rscript", r_script, temp_dir, temp_dir], check=True)  # Pass the directory only
+        
+        # Load the converted CSV
         data = pd.read_csv(output_csv)
         
         # Ensure the first column is treated as ID
@@ -215,3 +202,5 @@ if uploaded_files:
             # Option to download the results
             csv = results.to_csv(index=False).encode('utf-8')
             st.download_button(label="Download the predictions as CSV File", data=csv, file_name='predictions.csv', mime='text/csv')
+
+

@@ -6,11 +6,6 @@
 #Error in install.packages(c("hexView")) : unable to install packages
 #Execution halted
 
-dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)  # create personal library
-.libPaths(Sys.getenv("R_LIBS_USER"))  # add to the path
-
-install.packages("hexView")  # install like always
-library(hexView) 
 
 args <- commandArgs(trailingOnly = TRUE)
 opus.file.path <- args[1]

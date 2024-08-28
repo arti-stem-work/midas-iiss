@@ -9,7 +9,7 @@ import tempfile
 import os
 from rpy2 import robjects
 from rpy2.rinterface_lib.embedded import RRuntimeError
-from rpy2.rinterface import RScript
+from rpy2.rinterface_lib.embedded import RScript
 
 # Function to check and install R packages
 def install_r_package(package_name):

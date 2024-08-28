@@ -8,7 +8,7 @@ from PIL import Image
 import tempfile
 import os
 from rpy2 import robjects
-from rpy2.rinterface import RRuntimeError
+from rpy2.rinterface_lib.embedded import RRuntimeError
 from rpy2.rinterface import RScript
 
 # Function to check and install R packages

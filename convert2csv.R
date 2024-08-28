@@ -1,13 +1,3 @@
-#To avoid below error Created Personal library
-#Installing package into ‘/usr/local/lib/R/site-library’
-#(as ‘lib’ is unspecified)
-#Warning in install.packages(c("hexView")) :
-#'lib = "/usr/local/lib/R/site-library"' is not writable
-#Error in install.packages(c("hexView")) : unable to install packages
-#Execution halted
-
-
-
 args <- commandArgs(trailingOnly = TRUE)
 opus.file.path <- args[1]
 output.path <- args[2]

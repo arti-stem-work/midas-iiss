@@ -1,8 +1,13 @@
-# Create a directory in your home folder for R libraries
-dir.create(Sys.getenv("R_LIBS_USER"), showWarnings = FALSE, recursive = TRUE)
+# Define a personal library directory
+lib_path <- "/home/adminuser/R/x86_64-pc-linux-gnu-library/4.2"
 
-# Install the package to this directory
-install.packages("hexView", lib=Sys.getenv("R_LIBS_USER"))
+# Install the package in the personal library directory if not already installed
+if (!require(hexView, lib.loc = lib_path, character.only = TRUE)) {
+    install.packages("hexView", lib = lib_path)
+}
+
+# Load the package from the personal library directory
+library(hexView, lib.loc = lib_path)
 
 
 

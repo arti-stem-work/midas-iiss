@@ -14,17 +14,6 @@ try:
     print("Rscript Version:", result.stdout)
 except Exception as e:
     print("Error checking Rscript version:", e)
-import rpy2.robjects as robjects
-
-# Function to install R packages
-def install_r_package(package):
-    robjects.r(f'install.packages("{package}", repos="http://cran.us.r-project.org")')
-
-# Install hexView
-install_r_package('hexView')
-
-# Load the package
-robjects.r('library(hexView)')
 
 # Load your pre-trained model and pre-processing pipeline
 model = joblib.load('multi_output_stacking_model.pkl')

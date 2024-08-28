@@ -8,6 +8,13 @@ from PIL import Image
 import subprocess
 import os
 import tempfile  # Use for temporary directory management
+import subprocess
+try:
+    result = subprocess.run(["Rscript", "--version"], capture_output=True, text=True)
+    print("Rscript Version:", result.stdout)
+except Exception as e:
+    print("Error checking Rscript version:", e)
+
 
 # Load your pre-trained model and pre-processing pipeline
 model = joblib.load('multi_output_stacking_model.pkl')

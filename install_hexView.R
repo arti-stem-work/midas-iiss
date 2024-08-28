@@ -6,8 +6,32 @@
 #Error in install.packages(c("hexView")) : unable to install packages
 #Execution halted
 
-dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)  # create personal library
-.libPaths(Sys.getenv("R_LIBS_USER"))  # add to the path
+# install_hexView.R
 
-install.packages("hexView")  # install like always
-library(hexView) 
+# Create personal library if it does not exist
+personal_lib <- Sys.getenv("R_LIBS_USER")
+if (!dir.exists(personal_lib)) {
+  dir.create(personal_lib, recursive = TRUE)
+}
+.libPaths(c(personal_lib, .libPaths()))
+
+# Function to install packages
+install_package <- function(pkg) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    tryCatch({
+      install.packages(pkg, lib = personal_lib)
+    }, error = function(e) {
+      message("Error installing package: ", pkg)
+      message("Error: ", e$message)
+    })
+  }
+}
+
+# Install hexView package
+install_package("hexView")
+
+# Load the package
+if (!requireNamespace("hexView", quietly = TRUE)) {
+  stop("Package hexView could not be installed.")
+}
+library(hexView)

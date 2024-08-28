@@ -78,7 +78,7 @@ st.sidebar.markdown("### Instructions")
 st.sidebar.markdown("""
 1. Upload OPUS files. The system will convert them into a CSV.
 2. Ensure the spectral files are named using a prefix 3-letter followed by a six-digit number.
-3. The Spectra CSV created will have following columns representing the spectra wavelengths (MIR), while rows representing the measurements.
+3. The Spectra CSV created will have the following columns representing the spectra wavelengths (MIR) and rows representing the measurements.
 """)
 
 st.sidebar.image(data_format, caption='Example of the Spectra CSV format', use_column_width=True)

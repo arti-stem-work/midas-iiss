@@ -68,7 +68,7 @@ with col3:
                 color: #092922;
             }
         </style>
-        <h2>Mid-Infrared Spectroscopy Analysis System ( MIDAS )</h2>
+        <h2>Mid-Infrared Spectroscopy Analysis System ( MIDAS ) for Indian Agroecosystem</h2>
     """, unsafe_allow_html=True)
 with col4:
     st.image(icraf_logo, use_column_width=False)

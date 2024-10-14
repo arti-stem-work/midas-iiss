@@ -61,7 +61,7 @@ with col3:
             h2 {
                 font-family: 'Edu VIC WA NT Beginner', serif;
                 text-align: center;
-                font-size: 48px;
+                font-size: 46px;
                 text-shadow: 2px 2px 2px #aaa;
                 font-weight: bold;
                 margin-bottom: 10px;

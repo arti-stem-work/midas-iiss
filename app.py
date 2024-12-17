@@ -51,9 +51,9 @@ icraf_logo = icraf_logo.resize((180, 120))
 # Layout the title and logos using columns
 col1, col2, col3, col4 = st.columns([1, 1, 6, 1])
 with col1:
-    st.image(icar_logo, use_column_width=False)
+    st.image(icar_logo, use_container_width=False)
 with col2:
-    st.image(iiss_logo, use_column_width=False)
+    st.image(iiss_logo, use_container_width=False)
 with col3:
     st.markdown("""
         <style>
@@ -71,7 +71,7 @@ with col3:
         <h2>Mid-Infrared Spectroscopy Analysis System (MIDAS) for Indian Agroecosystem</h2>
     """, unsafe_allow_html=True)
 with col4:
-    st.image(icraf_logo, use_column_width=False)
+    st.image(icraf_logo, use_container_width=False)
 
 # Sidebar with instructions and data example
 st.sidebar.markdown("### Instructions")
@@ -81,7 +81,7 @@ st.sidebar.markdown("""
 3. The Spectra CSV created will have the following columns representing the spectra wavelengths (MIR) and rows representing the measurements.
 """)
 
-st.sidebar.image(data_format, caption='Example of the Spectra CSV format', use_column_width=True)
+st.sidebar.image(data_format, caption='Example of the Spectra CSV format', use_container_width=True)
 
 # Dropdown to select which property to predict
 property_selection = st.selectbox(

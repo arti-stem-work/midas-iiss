@@ -48,8 +48,8 @@ st.markdown(
     /* Hide Streamlit header */
     header {visibility: hidden;}
     
-    /* Hide Streamlit footer
-    footer {visibility: hidden;} */
+    /* Hide Streamlit footer*/
+    /*footer {visibility: hidden;} */
     
     /* Fullscreen mode */
     .main {

@@ -90,7 +90,7 @@ with main_col:
 
     with tabs[0]:
         st.markdown('<span class="custom-file-uploader">**Upload your OPUS files.**</span>', unsafe_allow_html=True)
-        uploaded_files = st.file_uploader("", type=[".0"], accept_multiple_files=True)
+        uploaded_files = st.file_uploader("", type=[".0"], accept_multiple_files=True,label_visibility="hidden")
 
         if uploaded_files:
             max_file_size_mb = 10
@@ -137,7 +137,7 @@ with main_col:
                     st.markdown(number_input_style, unsafe_allow_html=True)
 
                     num_rows = st.number_input(
-                        "**Enter the number of rows to preview spectral data:**",
+                        label="**Enter the number of rows to preview spectral data:**",
                         min_value=1,
                         max_value=spectra.shape[0],
                         value=1,

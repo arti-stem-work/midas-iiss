@@ -141,7 +141,8 @@ with main_col:
                         min_value=1,
                         max_value=spectra.shape[0],
                         value=1,
-                        step=1
+                        step=1,
+                        label_visibility="visible" 
                     )
 
                     selected_spectra = spectra.iloc[:num_rows, :]

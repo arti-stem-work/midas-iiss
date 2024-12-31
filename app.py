@@ -41,6 +41,26 @@ scaler = joblib.load('preprocess_pipeline.pkl')
 
 st.set_page_config(page_title="MIDAS", layout="wide")
 
+# Custom CSS to hide Streamlit header and footer
+st.markdown(
+    """
+    <style>
+    /* Hide Streamlit header */
+    header {visibility: hidden;}
+    
+    /* Hide Streamlit footer */
+    footer {visibility: hidden;}
+    
+    /* Fullscreen mode */
+    .main {
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 add_background_image("background_image.jpg", opacity=0.12)
 
 icar_logo = Image.open("ICAR Logo.png").resize((120, 120))

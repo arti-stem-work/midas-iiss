@@ -55,21 +55,24 @@ with col1:
 with col2:
     st.image(iiss_logo, use_container_width=False)
 with col3:
-    st.markdown("""
-        <style>
-            @font-face { font-family: 'Edu VIC WA NT Beginner'; src: url('fonts/EduVICWANTBeginner-Regular.ttf') format('truetype'); } 
-            h2 {
-                font-family: 'Edu VIC WA NT Beginner', serif;
-                text-align: center;
-                font-size: 46px;
-                text-shadow: 2px 2px 2px #aaa;
-                font-weight: bold;
-                margin-bottom: 10px;
-                color: #092922;
-            }
-        </style>
-        <h2>Mid-Infrared Spectroscopy Analysis System (MIDAS)<br> for Indian Agroecosystem</h2>
-    """, unsafe_allow_html=True)
+    st.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+    
+    .edu-vic-wa-nt-beginner-bold {
+        font-family: 'Edu VIC WA NT Beginner', serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Example header to test styling
+st.markdown('<h2 class="edu-vic-wa-nt-beginner-bold">Custom Styled Header</h2>', unsafe_allow_html=True)
 with col4:
     st.image(icraf_logo, use_container_width=False)
 

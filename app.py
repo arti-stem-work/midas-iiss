@@ -56,26 +56,26 @@ with col2:
     st.image(iiss_logo, use_container_width=False)
 with col3:
     # Embed the font using <link> tags
-st.markdown(
-    """
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap" rel="stylesheet">
+    st.markdown(
+        """
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap" rel="stylesheet">
+        
+        <style>
+        .edu-vic-wa-nt-beginner-bold {
+            font-family: 'Edu VIC WA NT Beginner', serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
-    <style>
-    .edu-vic-wa-nt-beginner-bold {
-        font-family: 'Edu VIC WA NT Beginner', serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Example header to test styling
-st.markdown('<h2 class="edu-vic-wa-nt-beginner-bold">Mid-Infrared Spectroscopy Analysis System (MIDAS) for Indian Agroecosystem</h2>', unsafe_allow_html=True)
+    # Example header to test styling
+    st.markdown('<h2 class="edu-vic-wa-nt-beginner-bold">Mid-Infrared Spectroscopy Analysis System (MIDAS) for Indian Agroecosystem</h2>', unsafe_allow_html=True)
 
 with col4:
     st.image(icraf_logo, use_container_width=False)

@@ -57,8 +57,7 @@ with col2:
 with col3:
     st.markdown("""
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Edu VIC WA NT Beginner:wght@500&display=swap');
-            h2 {
+            @font-face { font-family: 'Edu VIC WA NT Beginner'; src: url('fonts/EduVICWANTBeginner-VariableFont_wght.ttf') format('truetype'); }
                 font-family: 'Edu VIC WA NT Beginner', serif;
                 text-align: center;
                 font-size: 46px;

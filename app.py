@@ -56,8 +56,9 @@ with col2:
 with col3:
     st.markdown("""
         <style>
-           h2 {
-                font-family: 'sans-serif';
+            @import url('https://fonts.googleapis.com/css2?family=Edu VIC WA NT Beginner:wght@500&display=swap');
+            h2 {
+                font-family: 'Edu VIC WA NT Beginner', serif;
                 text-align: center;
                 font-size: 46px;
                 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* White outline */
@@ -68,6 +69,7 @@ with col3:
         </style>
         <h2>Mid-Infrared Spectroscopy Analysis System (MIDAS)<br> for Indian Agroecosystem</h2>
     """, unsafe_allow_html=True)
+
 with col4:
     st.image(icraf_logo)
 

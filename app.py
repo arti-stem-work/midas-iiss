@@ -56,7 +56,7 @@ with col2:
 with col3:
     st.markdown("""
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Edu VIC WA NT Beginner:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
             h2 {
                 font-family: 'Edu VIC WA NT Beginner', serif;
                 text-align: center;

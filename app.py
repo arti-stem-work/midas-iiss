@@ -65,7 +65,7 @@ add_background_image("background_image.jpg", opacity=0.3)
 
 icar_logo = Image.open("ICAR Logo.png").resize((120, 120))
 iiss_logo = Image.open("IISS Logo.png").resize((120, 120))
-icraf_logo = Image.open("ICRAF Logo.png").resize((120, 120))
+icraf_logo = Image.open("ICRAF Logo.png").resize((180, 120))
 data_format = Image.open("Data Format.png")
 
 col1, col2, col3, col4 = st.columns([1, 1, 6, 1])

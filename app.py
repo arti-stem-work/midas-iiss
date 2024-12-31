@@ -89,7 +89,7 @@ with main_col:
     tabs = st.tabs(["   📈 **SPECTRAL DATA**   ", "   🗃 **MODEL OUTPUT**   "])
 
     with tabs[0]:
-        st.markdown('<span class="custom-file-uploader">Upload your OPUS files.</span>', unsafe_allow_html=True)
+        st.markdown('<span class="custom-file-uploader">**Upload your OPUS files.**</span>', unsafe_allow_html=True)
         uploaded_files = st.file_uploader("", type=[".0"], accept_multiple_files=True)
 
         if uploaded_files:
@@ -170,7 +170,8 @@ with main_col:
     with tabs[1]:
         property_selection = st.selectbox(
             'Select soil property to make predictions:',
-            ['Cu', 'Zn', 'Fe', 'Mn', 'All']
+            ['Cu', 'Zn', 'Fe', 'Mn', 'All'],
+            label_visibility="visible" 
         )
 
         if uploaded_files:

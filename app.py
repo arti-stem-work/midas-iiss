@@ -10,7 +10,7 @@ import os
 import tempfile
 import base64
 
-def add_background_image(image_file, opacity=0.12):
+def add_background_image(image_file, opacity=0.3):
     with open(image_file, "rb") as image:
         encoded_string = base64.b64encode(image.read()).decode()
         background_style = f"""
@@ -61,7 +61,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-add_background_image("background_image.jpg", opacity=0.12)
+add_background_image("background_image.jpg", opacity=0.3)
 
 icar_logo = Image.open("ICAR Logo.png").resize((120, 120))
 iiss_logo = Image.open("IISS Logo.png").resize((120, 120))

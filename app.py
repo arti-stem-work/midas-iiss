@@ -26,26 +26,7 @@ scaler = joblib.load('preprocess_pipeline.pkl')
 
 # Set page configuration
 st.set_page_config(page_title="MIDAS", layout="wide")
-# Custom CSS to hide Streamlit header and footer
-st.markdown(
-    """
-    <style>
-    /* Hide Streamlit header */
-    header {visibility: hidden;}
-    
-    /* Hide Streamlit footer */
-    footer {visibility: hidden;}
-    
-        
-    .main {
-        padding: 0;
-        margin: 0;
-    }
-    </style>
-    
-    """,
-    unsafe_allow_html=True
-)
+
 
 # Add custom CSS to hide the "View Full Screen" option
 hide_streamlit_style = """

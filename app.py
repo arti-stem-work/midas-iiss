@@ -58,9 +58,9 @@ with col2:
 with col3:
     st.markdown("""
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Edu VIC WA NT Beginner:wght@500&display=swap');
+            @import url(https://fonts.bunny.net/css?family=abril-fatface:400);
             h2 {
-                font-family: 'Edu VIC WA NT Beginner', serif;
+                font-family: 'abril-fatface:400';
                 text-align: center;
                 font-size: 46px;
                 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* White outline */

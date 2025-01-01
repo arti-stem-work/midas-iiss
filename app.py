@@ -63,13 +63,13 @@ with col3:
                 font-family: 'Edu VIC WA NT Beginner', serif;
                 text-align: center;
                 font-size: 46px;
-                text-shadow: 2px 2px 2px #aaa;
+                text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* White outline */
                 font-weight: bold;
                 margin-bottom: 10px;
                 color: #092922;
             }
         </style>
-        <h2>Mid-Infrared Spectroscopy Analysis System (MIDAS) for Indian Agroecosystem</h2>
+        <h2>Mid-Infrared Spectroscopy Analysis System (MIDAS)<br> for Indian Agroecosystem</h2>
     """, unsafe_allow_html=True)
 with col4:
     st.image(icraf_logo, use_container_width=False)

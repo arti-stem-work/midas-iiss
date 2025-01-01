@@ -59,7 +59,7 @@ with col3:
     st.markdown("""
         <style>
           @import url('https://fonts.bunny.net/css?family=Roboto:400,700&display=swap');
-          html, body, [class*="css"] { font-family: 'Roboto', sans-serif; }
+
             h2 {
                 font-family: 'Roboto', sans-serif;
                 text-align: center;

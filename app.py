@@ -58,9 +58,9 @@ with col2:
 with col3:
     st.markdown("""
         <style>
-            @import url(https://fonts.bunny.net/css?family=abril-fatface:400);
+          @import url('https://fonts.bunny.net/css?family=Roboto:400,700&display=swap');
             h2 {
-                font-family: 'abril-fatface:400';
+                font-family: 'Roboto', sans-serif;
                 text-align: center;
                 font-size: 46px;
                 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* White outline */

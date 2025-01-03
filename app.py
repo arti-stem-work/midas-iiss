@@ -47,7 +47,7 @@ data_format = Image.open("Data Format.png")
 # Resize the images to the same dimensions
 icar_logo = icar_logo.resize((120, 120))
 iiss_logo = iiss_logo.resize((120, 120))
-icraf_logo = icraf_logo.resize((180, 120))
+icraf_logo = icraf_logo.resize((180, 180))
 
 # Layout the title and logos using columns
 col1, col2, col3, col4 = st.columns([1, 1, 6, 1])
